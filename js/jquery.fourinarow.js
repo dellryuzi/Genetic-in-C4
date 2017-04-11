@@ -1,3 +1,6 @@
+/* Connect in four with genetic algorithm(?)
+*/
+
 $(function() {
 
     if ($.fourinarow)
@@ -221,7 +224,49 @@ $(function() {
                 }
             }
         }
+///////////////////
 
+        function getGA() {
+
+          return Math.floor(Math.random()*7)
+          // var getFitness = geneticFitness(),
+          // getPopulation = getPopulation();
+          //
+          // doGenetic()
+          //get
+
+        }
+
+        function doGenetic(){
+          //loop population
+          //doCrossOver(getPopulation)
+          //newPopulation(getfitness)
+          //match with BestFitness
+          //return
+        }
+
+        function doCrossOver(pop){
+          //
+        }
+
+        function geneticFitness(){
+          //receive last data - getCol(evt) ?
+          //use
+        }
+
+        function getPopulation(n){
+
+          //terima population terakhir
+          //if no make random binary
+          //last population
+
+
+          //population based bestidentify ?
+        }
+
+
+
+///////////////////
         drawDisks();
 
         canvas.addEventListener('click', function(evt) {
@@ -231,9 +276,9 @@ $(function() {
             } else {
                 if (isCurrentPlayerRed) {
                     addDisk(getCol(evt), disk.red.name);
-                    isCurrentPlayerRed = false;
-                } else {
-                    addDisk(getCol(evt), disk.yellow.name);
+                    //send col to find fitness
+
+                    addDisk(getGA(), disk.yellow.name);
                     isCurrentPlayerRed = true;
                 }
             }
